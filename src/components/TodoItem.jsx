@@ -3,7 +3,7 @@ import { useTodo } from "../Contexts/TodoContext";
 
 function TodoItem({ todo }) {
     const [isTodoEditable,setIsTodoEditable] = useState(false)
-    const [todoMsg, setTodoMsg] = useState("")
+    const [todoMsg, setTodoMsg] = useState(todo.todo)
     const {updateTodo, deleteTodo, toggle} = useTodo()
 
     const editTodo = () => {
@@ -25,7 +25,7 @@ function TodoItem({ todo }) {
                 type="checkbox"
                 className="cursor-pointer"
                 checked={todo.completed}
-                onChange={toggle}
+                onChange={toggleTodo}
             />
             <input
                 type="text"
