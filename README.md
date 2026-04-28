@@ -1,16 +1,97 @@
-# React + Vite
+# React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and efficient Todo application built with React. This project demonstrates the use of modern React features such as hooks, context API, and local storage for state persistence.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Add new todos
+* Edit existing todos
+* Delete todos
+* Mark todos as completed
+* Persistent storage using localStorage
+* Clean and responsive UI
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* JavaScript (ES6+)
+* Tailwind CSS
+* Context API
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+react-todo/
+│
+├── src/
+│   ├── components/
+│   │   ├── TodoForm.jsx
+│   │   └── TodoItem.jsx
+│   │
+│   ├── Contexts/
+│   │   └── TodoContext.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── public/
+├── package.json
+└── README.md
+```
+
+## Installation
+
+1. Clone the repository:
+
+```
+git clone https://github.com/MAR-ARIF/react-todo.git
+```
+
+2. Navigate to the project directory:
+
+```
+cd react-todo
+```
+
+3. Install dependencies:
+
+```
+npm install
+```
+
+4. Start the development server:
+
+```
+npm run dev
+```
+
+## Usage
+
+* Enter a task in the input field and click "Add" to create a new todo.
+* Click the edit button to modify a todo.
+* Use the checkbox to mark a todo as completed.
+* Click the delete button to remove a todo.
+
+## State Management
+
+This project uses the Context API to manage global state across components. The main operations include:
+
+* Adding a todo
+* Updating a todo
+* Deleting a todo
+* Toggling completion status
+
+## Data Persistence
+
+Todos are stored in the browser's localStorage. This ensures that data is retained even after refreshing the page.
+
+## Known Issues
+
+* Editing a todo requires proper initialization of input state.
+* Ensure correct handling of toggle functionality with todo IDs.
+
+
+## License
+
+This project is open source and available under the MIT License.
